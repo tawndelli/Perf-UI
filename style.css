@@ -1,0 +1,315 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .section-header {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    height: 100dvh;
+  }
+
+  .placeholder{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  /* general */
+
+  .chatbot-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    min-width: 400px;
+    max-width: 400px;
+    background-color: #666;
+    padding: 20px;
+  }
+
+  .chatbot-messages {
+    overflow-y: auto;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    height: 100%;
+  }
+
+  .input-container {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 10px;
+  }
+
+  .message {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    overflow:hidden;
+    text-wrap: wrap;
+  }
+  
+  .message span {
+    width: 80%;
+    word-wrap: break-word;
+  }
+
+  .message img {
+    float: left;
+    margin: 0px 10px;
+    border-radius: 50%;
+    width: 30px;
+  }
+  
+  .user .message img {
+    float: right;
+  }
+
+  .bot {
+    justify-content: left;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .user {
+    justify-content: right;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: end;
+  }
+
+  .spinner {
+    display: none;
+    width: 15px;
+    height: 15px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    border-top-color: #dab200;
+    animation: spin 1s ease-in-out infinite;
+    align-self: center;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  #user-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #send-btn {
+    width: 50px;
+    height: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffd000;
+    color: #666;
+    cursor: pointer;
+  }
+  
+  #send-btn:hover {
+    background-color: #dab200;
+  }
+
+/* smells */
+
+#perfumery-materials-list {
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+    height: 100%;
+    text-align: center;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    overflow-y: auto;
+}
+
+.current-smell{
+    color: #ffd000;
+}
+
+.smell-search {
+    display: flex;
+    flex-direction: column;
+    background-color: #666;
+    padding: 20px;
+    min-width:300px;
+  }
+  
+  .list-item {
+    padding: 10px;
+  }
+  
+  .list-item:hover {
+    background-color: #ffd000;
+    cursor: default;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-container {
+    display: flex;
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 10px;
+  }
+  
+  .search-container input[type="text"] {
+    width: calc(100% - 80px);
+    padding: 5px;
+    margin-right: 5px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-container button {
+    width: 75px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffd000;
+    color: #666;
+    cursor: pointer;
+  }
+
+  .search-container button:hover {
+    background-color: #dab200;
+  }
+  
+/* materials */
+
+#formulas-list {
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+    height: 20rem;
+    margin-bottom: 20px;
+    overflow: auto;
+    overflow-x: hidden;
+    min-height: 300px;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
+.material-search {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #666;
+    min-width: 500px;
+    padding: 20px;
+}
+
+.formula-grid {
+    margin-top: 20px;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .amount-header{
+    width: 100px;
+  }
+  
+  table {
+    width: 100%;
+    height: 100px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #666;
+    padding: 8px;
+    color: #666;
+  }
+  
+  th {
+    background-color: #ccc;
+    border-radius: 5px;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #ffffff;
+  }
+  
+  /* Hover effect */
+  tr:hover {
+    background-color: #ffd000;
+    cursor: default;
+  }
+
+  .selected {
+    background-color: #dab200; /* Change background color */
+  }
+
+  /* Optional: Add transition for smooth highlight effect */
+#formulas-list div {
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Add hover effect */
+  #formulas-list div:hover {
+    background-color: #ffd000; /* Change background color on hover */
+  }
+
+  @media screen and (max-width: 1280px) {
+    .container{
+      flex-direction: column;
+    }
+    .smell-search{
+      width: auto;
+      min-width: 0px;
+      order: 2;
+      min-height: 300px;
+    }
+    .material-search{
+      width: auto;
+      min-width: 0px;
+      order: 3;
+    }
+    .chatbot-container{
+      height: auto;
+      order: 1;
+      min-height: 300px;
+      max-height: 100%;
+      width: auto;
+      min-width: 0px;
+      max-width:100%
+    }
+  }
+  
+  

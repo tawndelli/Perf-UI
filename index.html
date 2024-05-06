@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chatbot App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="smell-search">
+        <span class="section-header">
+            Smell Search 
+            <span class="current-smell"></span>
+        </span>
+        <div id="perfumery-materials-list">
+            <!-- Listbox populated with perfumery material names will be dynamically generated here -->
+            <span class="placeholder">Search for smells to display their most relevant materials.</span>
+        </div>
+        <div class="search-container">
+            <input type="text" id="smell-input" placeholder="Search smells (e.g. banana...)">
+            <button id="smell-search-btn">
+                <span class="spinner"></span>
+                <span class="smellBtn-text">Search</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="material-search">
+        <span class="section-header">Material Search</span>
+        <div id="formulas-list">
+            <!-- List of formula names -->
+            <span class="placeholder">Search for materials to display a list of relevant formulas.</span>
+        </div>
+        <div class="formula-grid">
+            <table>
+              <thead>
+                <tr>
+                  <th>Material</th>
+                  <th class="amount-header">Amount</th>
+                </tr>
+              </thead>
+              <tbody id="formula-grid-body">
+                <!-- Data rows will be dynamically generated here -->
+              </tbody>
+            </table>
+        </div>
+        <div class="search-container">
+            <input type="text" id="material-input" placeholder="Search formulas by materials...">
+            <button id="material-search-btn">
+                <span class="spinner"></span>
+                <span class="materialBtn-text">Search</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="chatbot-container">
+      <!-- Chatbot section -->
+        <span class="section-header">General Search</span>
+        <div class="chatbot-messages" id="chatbot-messages">
+          <!-- Chatbot messages will be displayed here -->
+        </div>
+        <div class="input-container">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-btn">
+                <span class="spinner"></span>
+                <span class="sendBtn-text">Send</span>
+            </button>
+        </div>
+      </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
