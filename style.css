@@ -142,6 +142,7 @@ body {
     flex-direction: column;
     justify-content:space-evenly;
     overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .current-smell{
@@ -207,7 +208,7 @@ body {
     border-radius: 5px;
     background-color: #ccc;
     height: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     overflow: auto;
     overflow-x: hidden;
     color: #666;
@@ -228,9 +229,13 @@ body {
 }
 
 .formula-grid {
-    margin-top: 20px;
+    margin-top: 10px;
     height: 100%;
     overflow: auto;
+    margin-bottom: 10px;
+    border-width: 1px;
+    border-color: #ccc;
+    border-radius: 5px;
   }
 
   .amount-header{
